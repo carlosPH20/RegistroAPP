@@ -1,9 +1,56 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons> 
     <ion-title>registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
+<form [formGroup] = "formularioRegistro">
+<ion-grid>    
+  <ion-row >
 
+    <ion-col size="12">
+      <h1 class="ion-text-center"></h1>
+    </ion-col>
+    <ion-col size="12">
+      <h1 class="ion-text-center"></h1>
+    </ion-col>
+
+    <ion-col size="12">
+      <h1 class="ion-text-center">Ingresa tus datos</h1>
+    </ion-col>
+    
+
+    <ion-col size="6">
+      <ion-item>
+        <ion-label position="floating">Nombre Usuario</ion-label>
+      <ion-input formControlName = "nombre"></ion-input>
+    </ion-item>
+  </ion-col>
+  <ion-col size="6" >
+  <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+    <ion-input formControlName = "password" type="password"></ion-input>
+  </ion-item>
+  </ion-col>
+
+  <ion-col size="12" >
+    <ion-item>
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input formControlName = "confirmacionPassword"></ion-input>
+    </ion-item>
+    </ion-col>
+    <ion-col size="12">
+      <h1 class="ion-text-center"></h1>
+    </ion-col>
+    <ion-col size="12" >
+      <ion-button (click)="guardar()" color="primary" expand="block"> Registrarse</ion-button>
+  </ion-col>
+
+</ion-row>
+</ion-grid>
+</form>
 </ion-content>
