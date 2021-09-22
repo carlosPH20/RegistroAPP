@@ -1,9 +1,50 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-content padding>
 
+          <img src="assets/logo.png" alt="imagen" />
+  <ion-grid fixed>
+    <ion-row>
+    
+    <form [formGroup] = "formularioLogin">
+      <ion-col size="12" class="ion-padding">
+        <ion-item>
+          <ion-label position="floating">Nombre usuario</ion-label>
+          <ion-input formControlName = "nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="12" class="ion-padding">
+        <ion-item > 
+          <ion-label position="floating">Contraseña</ion-label >
+          <ion-input formControlName = "password" type= "password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </form>
+      <ion-col size="12" >
+          <ion-button (click)="ingresar()" color="secondary" expand="block"> Ingresar</ion-button>
+      </ion-col>
+      <ion-col size="12" >
+        
+        
+    </ion-col>
+    <ion-col size="12" >
+      <ion-button color="secondary" size="small" expand="full" fill = "clear">Recuperar contraseña</ion-button>
+    </ion-col>
+    <ion-col size="12">
+      <ion-button [routerLink] = "['/registro']" size="medium" expand="block" color="success">Registrarse</ion-button>
+    </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
