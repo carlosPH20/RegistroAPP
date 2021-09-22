@@ -50,6 +50,21 @@ export class LoginPage implements OnInit {
     return;
       
       
+    }
+  }
+  async contra(){
+
+    {const alert = await this.alertController.create({
+      header: 'Recuperar contraseña',
+      message: 'Su contraseña sera Restablecida mediante un correo durante los proximos dias.',
+      buttons: ['Confirmar']
+
+    });
+
+    await alert.present();
+    return;
+      
+      
       
       
     }
